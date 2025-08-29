@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Libra Prime</title>
+    <link rel="stylesheet" href="css/style-cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <main class="main-container">
+        <div class="registration-card">
+            <div class="logo">
+                <a href="index.html"><img src="img/libra.png" alt="Logo Libra Prime"></a>
+            </div>
+            <h2>Crie sua conta.</h2>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Crie sua Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <hr class="form-divider">
+                
+                <h3>Escolha seu plano:</h3>
+                <div class="plan-options">
+                    <label class="plan-card">
+                        <input type="radio" name="plan" value="libra" required>
+                        <div class="plan-details">
+                            <h4>Plano Libra</h4>
+                            <p>R$ 110/mês</p>
+                            <ul>
+                                <li>Acesso à unidade</li>
+                                <li>Treinos no App</li>
+                                <li>Sem fidelidade</li>
+                            </ul>
+                        </div>
+                    </label>
+                    <label class="plan-card featured">
+                        <input type="radio" name="plan" value="prime" required>
+                        <div class="plan-details">
+                            <span class="badge">Mais popular</span>
+                            <h4>Plano Prime</h4>
+                            <p>R$ 150/mês</p>
+                            <ul>
+                                <li>Acesso a todas as unidades</li>
+                                <li>Aulas coletivas</li>
+                                <li>Descontos em parceiros</li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn-cta">Finalizar Cadastro</button>
+            </form>
+            <p class="login-link">Já tem uma conta? <a href="login.html">Faça login aqui.</a></p>
+        </div>
+    </main>
+
+    <script src="js/script-cadastro.js"></script>
+</body>
+</html>
