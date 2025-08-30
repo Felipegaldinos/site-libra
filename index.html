@@ -11,55 +11,41 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
-
+ <!--MENU-->
     <header class="header">
         <div class="logo">
-            <img src="img/libra.png" alt="Logo Libra Prime">
+            <img src="img/libra-remove.png" alt="Logo Libra Prime">
         </div>
         <nav class="nav-links">
             <a href="#home">Início</a>
             <a href="#advantages">Vantagens</a>
             <a href="#plans">Planos</a>
             <a href="#units">Unidades</a>
+            <a href="#parca">Parceiros</a>
             <a href="login.html">Área do Aluno</a>
             <a href="cadastro.html" class="btn-cta-nav">Matricule-se</a>
         </nav>
         <div class="burger-menu"><i class="fa-solid fa-bars"></i></div>
-    </header>
-
+    </header>  
+<!--CARROSSEL-->
     <main>
         <section id="home" class="hero-section">
-            <div class="carousel-container">
-                <div class="carousel-slide active" style="background-image: url('img/exemplo01.png');">
-                    <div class="slide-content">
-                     <!--  <h1>Sua melhor versão <br>começa aqui.</h1>
-                        <p>Matricule-se agora e ganhe 50% de desconto no primeiro mês!</p>
-                        <a href="#plans" class="btn-cta">Aproveitar a oferta</a>--> 
-                    </div>
-                </div>
+    <div class="carousel-container" >
+        <div class="carousel-slide active" style="background-image: url('img/an.jpg'); height: 600px;">
+        </div>
 
-                <div class="carousel-slide" style="background-image: url('img/exemplo02.png');">
-                    <div class="slide-content">
-                        <!--    <h1>Clube de Benefícios Libra Prime.</h1>
-                        <p>Alunos Libra Prime têm descontos exclusivos em grandes marcas parceiras.</p>
-                        <a href="#" class="btn-cta">Conhecer o Clube</a> -->
-                    </div>
-                </div>
+        <div class="carousel-slide" style="background-image: url('img/Banner-libra.png'); height: 600px; width: 1500px;">
+        </div>
 
-                <div class="carousel-slide" style="background-image: url('img/exemplo03.png');">
-                    <div class="slide-content">
-                          <!--  <h1>Experimente a Libra Prime.</h1>
-                        <p>Agende sua aula experimental grátis e comece a treinar hoje mesmo!</p>
-                        <a href="#contact" class="btn-cta">Agendar aula grátis</a> -->
-                    </div>
-                </div>
-            </div>
+        <div class="carousel-slide" style="background-image: url('img/mega.jpg'); height: 600px;">
+        </div>
+    </div>
 
-            <button class="carousel-btn prev-btn">❮</button>
-            <button class="carousel-btn next-btn">❯</button>
-        </section>
-
-        <section id="advantages" class="advantages-section">
+    <div class="carousel-dots">
+        </div>
+</section>
+<!--VANTAGENS-->
+        <section id="advantages" class="advantages-section" style="background-image: url('img/Banner-l-foco.png');">
             <div class="container">
                 <h2>Seu lugar de treino.</h2>
                 <div class="advantages-grid">
@@ -86,38 +72,42 @@
                 </div>
             </div>
         </section>
-
-        <section id="plans" class="plans-section">
-            <div class="container">
-                <h2>Planos para sua jornada.</h2>
-                <div class="plans-grid">
-                    <div class="plan-card">
-                        <h3>Plano Libra</h3>
-                        <p class="plan-subtitle">Para quem quer começar a evoluir.</p>
-                        <p class="plan-price"><span>R$</span>110<span>/mês</span></p>
-                        <ul class="plan-features">
-                            <li><i class="fa-solid fa-check"></i> Acesso ilimitado à unidade</li>
-                            <li><i class="fa-solid fa-check"></i> Treinos personalizados</li>
-                            <li><i class="fa-solid fa-check"></i> Avaliação física inicial</li>
-                        </ul>
-                        <a href="#contact" class="btn-cta">Matricule-se</a>
-                    </div>
-                    <div class="plan-card featured">
-                        <h3>Plano Prime</h3>
-                        <p class="plan-subtitle">Para quem busca a melhor performance.</p>
-                        <p class="plan-price"><span>R$</span>150<span>/mês</span></p>
-                        <ul class="plan-features">
-                            <li><i class="fa-solid fa-check"></i> Todos os benefícios do Plano Libra</li>
-                            <li><i class="fa-solid fa-check"></i> Acesso a todas as unidades</li>
-                            <li><i class="fa-solid fa-check"></i> Aulas coletivas VIP</li>
-                            <li><i class="fa-solid fa-check"></i> Desconto em parceiros</li>
-                        </ul>
-                        <a href="#contact" class="btn-cta">Matricule-se</a>
-                    </div>
-                </div>
+<!--PLANOS-->
+       <section id="plans" class="plans-section" style="background-image: url('img/planos-promo.png'); ">
+    <div class="container">
+        <h2>Planos para sua jornada.</h2>
+        <div class="plans-grid">
+            <div class="plan-card">
+                <h3>Plano Libra</h3>
+                <p class="plan-subtitle">Para quem quer começar a evoluir.</p>
+                <p class="plan-price"><span>R$</span>110<span>/mês</span></p>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-check"></i> Acesso ilimitado à unidade</li>
+                    <li><i class="fa-solid fa-check"></i> Treinos personalizados</li>
+                    <li><i class="fa-solid fa-check"></i> Sem fidelidade</li>
+                    <li><i class="fa-solid fa-check"></i> Horário livre</li>
+                    <li><i class="fa-solid fa-check"></i> Sem taxa de adesão</li>
+                </ul>
+                <a href="#contact" class="btn-cta">Matricule-se</a>
             </div>
-        </section>
-
+            <div class="plan-card featured">
+                <span class="badge">Mais popular</span>
+                <h3>Plano Prime</h3>
+                <p class="plan-subtitle">Para quem busca a melhor performance.</p>
+                <p class="plan-price"><span>R$</span>150<span>/mês</span></p>
+                <ul class="plan-features">
+                    <li><i class="fa-solid fa-check"></i> Todos os benefícios do Plano Libra</li>
+                    <li><i class="fa-solid fa-check"></i> Acesso a todas as unidades</li>
+                    <li><i class="fa-solid fa-check"></i> Aulas coletivas VIP</li>
+                    <li><i class="fa-solid fa-check"></i> Desconto em parceiros</li>
+                    <li><i class="fa-solid fa-check"></i> Avaliação física trimestral</li>
+                </ul>
+                <a href="#contact" class="btn-cta">Matricule-se</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--UNIDADES-->
         <section id="units" class="units-section">
             <div class="container">
                 <h2>Treine em qualquer lugar.</h2>
@@ -275,5 +265,7 @@
     
     <script src="js/script.js"></script>
     <script src="js/fqa.js"></script>
+    <script src="js/carrossel.js"></script>
+
 </body>
 </html>
