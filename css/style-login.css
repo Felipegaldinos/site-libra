@@ -88,6 +88,7 @@
 
 }.login-logo-link img {
     height: 120px;
+    margin-bottom: 0;
 }
 .login-links a {
     text-decoration: none;
