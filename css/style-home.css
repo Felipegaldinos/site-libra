@@ -405,7 +405,7 @@ h2 {
 
 /* Seção "Treine em qualquer lugar" */
 .units-section {
-    background-color: var(--color-dark-grey);
+    background-image: url('img/banner-opaci.png');
 }
 
 .unit-card {
@@ -421,6 +421,7 @@ h2 {
 .unit-info {
     padding: 50px;
     display: flex;
+    border: solid 1px var(--color-gold);
     flex-direction: column;
     justify-content: center;
 }
@@ -533,7 +534,7 @@ h2 {
 
 /* Seção de Dúvidas (FAQ) */
 .faq-section {
-    background-color: var(--color-dark-grey);
+    background-color: var(--color-gold);
 }
 
 .accordion {
@@ -590,23 +591,77 @@ h2 {
     margin-top: 50px;
 }
 
-/* Botão de WhatsApp Flutuante */
-.whatsapp-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-    background-color: #25d366;
+.btn-cta {
+    background-color: var(--color-black);
     color: var(--color-white);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+}
+/* Botoes Flutuante */
+/* Estilo base para dispositivos móveis */
+.fixed-bottom-menu {
+    position: fixed;
+    padding-right: px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    font-size: 30px;
-    transition: transform 0.3s ease;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.fixed-button {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.fixed-button i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.fixed-button:first-child {
+    border-right: 1px solid #ddd;
+}
+
+/* Estilo para desktop */
+@media (min-width: 768px) {
+    .fixed-bottom-menu {
+        bottom: 20px;
+        right: 40px;
+        left: auto;
+        width: auto;
+        max-width: 350px; /* Aumentado para garantir espaço para o texto */
+        border-radius: 50px;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .fixed-button {
+        flex-direction: row;
+        padding: 15px 20px; /* Ajuste no padding para um visual mais equilibrado */
+        white-space: nowrap;
+    }
+
+    .fixed-button i {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .fixed-button:first-child {
+        border-right: 1px solid #ddd;
+    }
 }
 
 /* Rodapé (Novo Estilo) */
@@ -690,6 +745,45 @@ h2 {
 .footer-bottom .copyright {
     margin-top: 20px;
     opacity: 0.5;
+}
+
+.footer-app-download {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.footer-app-download h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app-buttons a img {
+    height: 40px; /* Ajuste o tamanho conforme a sua preferência */
+    transition: transform 0.3s ease;
+}
+
+.app-buttons a:hover img {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 480px) {
+    .app-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .footer{
+        margin-bottom: 50px;
+    }
 }
 
 /* Responsividade do Rodapé */

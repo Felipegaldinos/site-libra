@@ -15,13 +15,13 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/login-background.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../img/Banner-libra.png') no-repeat center center/cover;
 }
 
 .login-container {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 10px; 
     text-align: center;
     width: 100%;
     max-width: 400px;
@@ -38,28 +38,27 @@
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
-
-.form-group {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
+/* Estilo para os campos de input */
 .form-group input {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #333;
-    background-color: #1a1a1a;
-    color: var(--color-white);
-    border-radius: 5px;
+    padding: 15px;
+    background-color: #1a1a1a; /* Fundo preto bem escuro */
+    border: 1px solid #333; /* Borda sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    color: #fff; /* Cor do texto branco para melhor leitura */
     font-size: 16px;
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+    transition: all 0.3s ease;
 }
 
+/* Estilo para o campo de input quando está focado */
+.form-group input:focus {
+    outline: none; /* Remove a borda de foco padrão do navegador */
+    border-color: #ffd700; /* Dourado da sua logo */
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6); /* Efeito de brilho */
+}
+
+/* Estilo para o botão de login */
 .btn-login {
     width: 100%;
     padding: 15px;
@@ -79,15 +78,17 @@
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
-
+/* imagem*/
 .login-links {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 14px;
-}
 
+}.login-logo-link img {
+    height: 120px;
+}
 .login-links a {
     text-decoration: none;
     color: var(--color-white);
@@ -96,6 +97,15 @@
 
 .login-links a:hover {
     color: var(--color-gold);
+}
+/* Estilo geral do formulário */
+#login-form {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 /* Responsividade */
