@@ -416,8 +416,6 @@ h2 {
     margin-top: 50px;
 }
 
-
-
 .unit-info {
     padding: 50px;
     display: flex;
@@ -439,41 +437,8 @@ h2 {
     opacity: 0.9;
 }
 
-/* Seção de Contato */
-.contact-section {
-    background-color: var(--color-black);
-}
-
-.contact-card {
-    background-color: var(--color-dark-grey);
-    padding: 50px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-card h2 {
-    margin-bottom: 30px;
-}
-
-#free-class-form input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #333;
-    background-color: #1a1a1a;
-    color: var(--color-white);
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#free-class-form input::placeholder {
-    color: #888;
-}
-
-.contact-card .btn-cta {
-    width: 100%;
+.unit-info a {
+    background-color: var(--color-gold);
 }
 /* Seção de Depoimentos */
 .testimonials-section {
