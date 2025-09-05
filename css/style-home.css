@@ -103,8 +103,8 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: transparent;
+    padding: 10px 40px;
+    background-color: var(--color-black);
     transition: background-color 0.3s ease;
 }
 
@@ -122,6 +122,14 @@ h2 {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--color-gold);
+}
+
+#bntnav{
+    color: var(--color-black);
 }
 
 .burger-menu {
@@ -282,7 +290,7 @@ h2 {
     padding: 80px 0;
     color: var(--color-white);
     text-align: center;
-    background-image: url('img/planos-promo.png'); /* Caminho da nova imagem */
+    background: url('../img/img-pla.PNG'); /* Caminho da nova imagem */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efeito de parallax */
@@ -440,6 +448,11 @@ h2 {
 .unit-info a {
     background-color: var(--color-gold);
 }
+
+.unit-info a:hover {
+    color: var(--color-white);
+}
+
 /* Seção de Depoimentos */
 .testimonials-section {
     background-color: var(--color-black);
@@ -829,6 +842,11 @@ h2 {
     .unit-info {
         padding: 30px;
     }
+    .plans-section {
+    background: url('../img/planos-promo.png');
+    background-position: center;
+    background-attachment: fixed; 
+}
 }
 
 @media (max-width: 768px) {
