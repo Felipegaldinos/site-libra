@@ -5,6 +5,8 @@
     --color-dark-grey: #1c1c1c;
     --color-gold: #FFD700;
     --color-white: #FFFFFF;
+     --color-gradient-start: #0a0a0a; /* Tom mais escuro para o gradiente */
+  --color-shadow: rgba(0, 0, 0, 0.7); /* Sombra mais forte e definida */
     --font-primary: 'Bebas Neue', sans-serif;
     --font-text: 'Poppins', sans-serif;
 }
@@ -95,24 +97,33 @@ h2 {
 
 /* Header (Menu Global) */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background-color: var(--color-black);
-    transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px; /* Aumenta o padding para mais espaço */
+  background: linear-gradient(
+    to bottom,
+    var(--color-gradient-start),
+    var(--color-black)
+  ); /* Adiciona um gradiente sutil */
+  transition:
+    padding 0.3s ease,
+    background 0.3s ease; /* Transições mais fluidas */
+  box-shadow: 0 0 5px var(--color-shadow); /* Uma sombra sutil no estado inicial */
 }
 
 .header.scrolled {
-    background-color: var(--color-black);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px 50px; /* Diminui o padding para o "encolhimento" */
+  background-color: var(--color-black); /* Cor sólida ao rolar */
+  box-shadow: 0 8px 20px var(--color-shadow),
+    0 0 50px rgba(0, 0, 0, 0.2) inset; /* Sombra forte e um brilho interno sutil */
+  border-bottom: 2px solid #ffcc00; /* Linha amarela na parte de baixo */
 }
-
 .logo img {
     height: 60px;
 }
@@ -512,7 +523,7 @@ h2 {
 
 /* Seção de Dúvidas (FAQ) */
 .faq-section {
-    background-color: var(--color-gold);
+    background-color: #cfb41b;
 }
 
 .accordion {
@@ -561,7 +572,7 @@ h2 {
 
 .accordion-content p {
     padding-bottom: 20px;
-    color: #a8a8a8;
+      color: var(--color-white);
 }
 
 .faq-action {
@@ -862,4 +873,12 @@ h2 {
     .burger-menu {
         display: block;
     }
+}
+/* trasição*/
+body {
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
 }
