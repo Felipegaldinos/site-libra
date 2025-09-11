@@ -1,0 +1,164 @@
+/* Variáveis de Cor */
+:root {
+    --color-gold: #ffd700;
+    --color-black: #000;
+    --color-dark-gray: #1a1a1a;
+    --color-white: #fff;
+    --color-light-gray: #ccc;
+}
+
+/* Estilos Gerais */
+body.suggestions-page {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../img/banner.png');
+}
+.suggestions-container {
+    background-color: var(--color-dark-gray);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.logo-link {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.form-title {
+    font-size: 2.2em;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    font-size: 1em;
+    color: var(--color-light-gray);
+    margin-bottom: 30px;
+}
+
+/* Estilo do Formulário */
+#suggestions-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: var(--color-white);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: var(--color-white);
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* Estilo para a checkbox de anonimato */
+.anonymous-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.anonymous-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.anonymous-group label {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+/* Estilo para os campos de nome e e-mail */
+.name-email-fields {
+    display: flex;
+    gap: 20px;
+}
+
+.name-email-fields .form-group-item {
+    flex: 1;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #ffc400;
+}
+
+.return-link {
+    margin-top: 25px;
+}
+
+.return-link a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.return-link a:hover {
+    color: var(--color-white);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .suggestions-container {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    .form-title {
+        font-size: 1.8em;
+    }
+    
+    .name-email-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+}

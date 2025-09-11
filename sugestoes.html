@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugestões | Libra Prime</title>
+    <link rel="stylesheet" href="css/sugestoes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" 
+    rel="stylesheet">
+    <link rel="shortcut icon" href="img/libra.png" type="image/x-icon">
+</head>
+<body class="suggestions-page">
+
+    <div class="suggestions-container">
+        <a href="index.html" class="logo-link">
+            <img src="img/libra-remove.png" alt="Logo Libra Prime" class="logo">
+        </a>
+        <h2 class="form-title">Envie sua mensagem</h2>
+        <p class="form-subtitle">Sua opinião é muito importante. Escolha a unidade e decida se deseja se identificar ou permanecer anônimo.</p>
+        
+        <form id="suggestions-form">
+            <div class="form-group">
+                <label for="unit">Unidade:</label>
+                <select id="unit" name="unit" required>
+                    <option value="">Selecione a unidade...</option>
+                    <option value="itapetinga">Itapetinga</option>
+                    <option value="nossa-senhora-da-apresentacao">Nossa Senhora da Apresentação</option>
+                    <option value="sao-goncalo">São Gonçalo</option>
+                </select>
+            </div>
+
+            <div class="form-group anonymous-group">
+                <input type="checkbox" id="anonymous" name="anonymous">
+                <label for="anonymous">Enviar anonimamente</label>
+            </div>
+            
+            <div class="form-group name-email-fields">
+                <div class="form-group-item">
+                    <label for="name">Nome completo:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group-item">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="category">Selecione o tipo de mensagem:</label>
+                <select id="category" name="category" required>
+                    <option value="">Selecione...</option>
+                    <option value="melhoria">Melhorias</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="duvida">Dúvidas</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Sua mensagem:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+
+        <div class="return-link">
+            <a href="index.html">← Voltar para a página inicial</a>
+        </div>
+    </div>
+
+    <script>
+        const anonymousCheckbox = document.getElementById('anonymous');
+        const nameEmailFields = document.querySelector('.name-email-fields');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+
+        anonymousCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                nameEmailFields.style.display = 'none';
+                nameInput.removeAttribute('required');
+                emailInput.removeAttribute('required');
+            } else {
+                nameEmailFields.style.display = 'flex';
+                nameInput.setAttribute('required', 'required');
+                emailInput.setAttribute('required', 'required');
+            }
+        });
+
+        // Configura o estado inicial ao carregar a página
+        if (anonymousCheckbox.checked) {
+            nameEmailFields.style.display = 'none';
+        } else {
+            nameInput.setAttribute('required', 'required');
+            emailInput.setAttribute('required', 'required');
+        }
+    </script>
+</body>
+</html>
