@@ -5,10 +5,11 @@
     --card-bg-color: #2b2b2b;
     --text-color: #f0f0f0;
     --highlight-color: #d1b400;
+    --font-primary: 'Bebas Neue', sans-serif;
+
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     background-image: url(../img/Banner.png);
     color: var(--text-color);
     margin: 0;
@@ -40,14 +41,14 @@ h3 {
     margin-top: 90px;
 }
 
-/* Seção de Banner e Informações (nova estrutura) */
+/* Seção de Banner  */
 .banner-info {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 40px;
     padding: 20px;
-     background-color: rgba(28, 28, 28, 0.9);
+    background-color: rgba(28, 28, 28, 0.9);
 }
 
 .banner-image-container {
@@ -167,6 +168,9 @@ h3 {
     border-radius: 8px;
     margin-bottom: 15px;
 }
+.section-container h3 {
+    font-family: var(--font-primary);
+}
 
 /* Planos */
 .plano-card {
@@ -183,6 +187,7 @@ h3 {
 
 .plano-card h3 {
     margin: 0 0 10px;
+    font-family: var(--font-primary);
 }
 
 .plano-card .price {
@@ -340,9 +345,7 @@ footer {
     .contato-content {
         flex-direction: column;
     }
-    .section-container h2 {
-        font-size: 2rem;
-    }
+  
 /* Responsividade para a nova seção */
     .banner-info {
         flex-direction: column;

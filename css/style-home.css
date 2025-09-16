@@ -558,42 +558,52 @@ h2 {
 }
 
 /* Botoes Flutuante */
+/* Estilo para o menu flutuante arredondado */
 .fixed-bottom-menu {
-  position: fixed;
-  padding-right: px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Alinha o menu à direita */
+    z-index: 1000;
+    
+    /* Centraliza os itens dentro do contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #fff;
+    border-radius: 50px; /* Deixa o contêiner bem arredondado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Garante que as bordas arredondadas não sejam afetadas */
 }
 
+/* Estilo para cada botão individual */
 .fixed-button {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
-  font-weight: 600;
+    display: flex; /* Alinha o ícone e o texto lado a lado */
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.fixed-button span {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap; /* Impede que o texto quebre */
 }
 
 .fixed-button i {
-  font-size: 20px;
-  margin-bottom: 5px;
+    font-size: 20px;
+    margin-right: 10px;
 }
 
+/* Adiciona a linha divisória entre os botões */
 .fixed-button:first-child {
-  border-right: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.fixed-button:hover {
+    background-color: #f0f0f0;
 }
 
 /* Rodapé (Novo Estilo) */
@@ -769,6 +779,19 @@ h2 {
 
 /* Consolidação de regras para telas menores que 768px */
 @media (max-width: 768px) {
+  .fixed-bottom-menu {
+        width: 100%;
+        bottom: 0;
+        border-radius: 0;
+        left: 50%; 
+        right: auto;
+        transform: translateX(-50%);
+    }
+    
+    .fixed-button {
+    padding: 10px 15px;
+    }
+  
   .hero-content h1 {
     font-size: 4rem;
   }
