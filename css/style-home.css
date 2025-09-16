@@ -60,7 +60,7 @@ a {
 
 .btn-cta:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 5px 15px rgba(26, 25, 18, 0.4);
 }
 
 .btn-cta-nav {
@@ -75,7 +75,7 @@ a {
 }
 
 .btn-cta-nav:hover {
-  box-shadow: 0 0 15px #FFD600;
+  box-shadow: 0 0 15px #0c0b08;
   transform: scale(1.05);
 }
 
@@ -734,10 +734,15 @@ h2 {
   .nav-links a:last-child {
     border-bottom: none;
   }
-  .btn-cta-nav {
+  #bntnav.btn-cta-nav {
     display: block;
     margin: 20px;
   }
+
+  #bntnav.btn-cta-nav:hover {
+   color: var(--color-black);
+  }
+
   .burger-menu {
     display: block;
   }
