@@ -109,11 +109,9 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background: linear-gradient(
-    to bottom,
-    var(--color-gradient-start),
-    var(--color-black)
-  );
+  background-image: url('../img/plano-fundo.png');
+  background-size: cover;
+  background-position: center;
   transition:
     padding 0.3s ease,
     background 0.3s ease;
@@ -187,7 +185,6 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -244,7 +241,7 @@ h2 {
 
 /* Seção de Vantagens */
 .advantages-section {
-  background-color: var(--color-dark-grey);
+ background-image: url('../img/plano-de-fundo-preto.png');
 }
 
 .advantages-grid {
@@ -255,8 +252,10 @@ h2 {
 }
 
 .advantage-card {
-  background-color: var(--color-black);
-  box-shadow: 0 1px 8px #FFD700;
+  background-image: url('../img/plano-fundo.png');
+  background-size: cover;
+  background-position: center;
+  border: solid 1px var(--color-gold);
   padding: 30px;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -369,11 +368,11 @@ h2 {
   margin-bottom: 30px;
 }
 
-.plan-card ul li {
+.plan-card ul li  {
   font-size: 1rem;
   text-align: left;
   margin-bottom: 15px;
-  color: #a8a8a8;
+  color: var(--color-white);
 }
 
 .plan-card ul li i {
@@ -401,12 +400,14 @@ h2 {
 
 /* Seção "Treine em qualquer lugar" */
 .units-section {
-  background-image: url('img/banner-opaci.png');
+  background-image: url('../img/plano-de-fundo-preto.png');
 }
 
 .unit-card {
   display: flex;
-  background-color: var(--color-black);
+  background-image: url('../img/plano-fundo.png');
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
   overflow: hidden;
   margin-top: 50px;
@@ -443,7 +444,7 @@ h2 {
 
 /* Seção de Depoimentos */
 .testimonials-section {
-  background-color: var(--color-black);
+  background-image: url('../img/plano-fundo.png');
 }
 
 .testimonials-header {
@@ -454,7 +455,7 @@ h2 {
 
 .testimonials-header p {
   font-size: 1.1rem;
-  color: #a8a8a8;
+  color: var(--color-white);
 }
 
 .testimonials-grid {
@@ -464,7 +465,8 @@ h2 {
 }
 
 .testimonial-card {
-  background-color: var(--color-dark-grey);
+  
+  border: solid 1px var(--color-gold);
   padding: 30px;
   border-radius: 10px;
 }
