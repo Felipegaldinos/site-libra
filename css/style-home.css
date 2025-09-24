@@ -63,7 +63,7 @@ a {
   box-shadow: 0 5px 15px rgba(26, 25, 18, 0.4);
 }
 
-.btn-cta-nav {
+#bntnav {
   display: inline-block;
   background-color: var(--color-gold);
   color: var(--color-black);
@@ -74,7 +74,7 @@ a {
   transition: 0.3s;
 }
 
-.btn-cta-nav:hover {
+#bntnav:hover {
   box-shadow: 0 0 15px #0c0b08;
   transform: scale(1.05);
 }

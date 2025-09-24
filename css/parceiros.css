@@ -3,6 +3,7 @@
     --yellow: #FFD700;
     --dark-grey: #1a1a1a;
     --light-grey: #f0f0f0;
+    --font-primary: 'Bebas Neue', sans-serif;
 }
 
 * {
@@ -23,14 +24,15 @@ body {
     padding: 60px 0;
     text-align: center;
     margin-top: 50px;
-   background-image: url('../img/pm.png');
+   background-image: url('../img/branco.png');
     color: #333; /* Texto principal em cinza escuro para contraste */
 }
 
 .page-title, h3 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 10px;
+    font-family: var(--font-primary);
     /* ---- Estilo do Gradiente ---- */
     background: linear-gradient(to right, #FFD700, #634323);
     -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto para navegadores WebKit (Chrome, Safari) */

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro | Libra Prime</title>
@@ -14,71 +14,125 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-  </head>
-  <body>
+</head>
+<body>
     <main class="main-container">
-      <div class="registration-card">
-        <div class="logo">
-          <a href="index.html"
-            ><img src="img/libra-remove.png" alt="Logo Libra Prime"
-          /></a>
+        <div class="registration-card">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/libra-remove.png" alt="Logo Libra Prime" />
+                </a>
+            </div>
+
+            <div id="cadastro-form-section">
+                <h1>Cadastre-se</h1>
+                <h2>Crie sua conta.</h2>
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="name">Nome*</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Sobrenome*</label>
+                        <input type="text" id="surname" name="surname" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="nationality">Nacionalidade *</label>
+                        <select id="nationality" name="nationality" required>
+                            <option value="br" selected>Brasil</option>
+                            <option value="other">Outra</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Data de nascimento (dd/mm/aaaa)*</label>
+                        <input type="text" id="dob" name="dob" placeholder="dd/mm/aaaa" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF (CIN)*</label>
+                        <input type="text" id="cpf" name="cpf" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group-phone">
+                        <div class="form-group ddi">
+                            <label for="ddi">DDI*</label>
+                            <select id="ddi" name="ddi" required>
+                                <option value="+55" selected>+55</option>
+                                <option value="+1">+1</option>
+                                <option value="+44">+44</option>
+                            </select>
+                        </div>
+                        <div class="form-group cell">
+                            <label for="cellphone">Celular*</label>
+                            <input type="tel" id="cellphone" name="cellphone" required />
+                        </div>
+                    </div>
+                    <div class="form-group gender-group">
+                        <p>Gênero</p>
+                        <div class="radio-options toggle-options">
+                            <label class="radio-option">
+                                <input type="radio" name="gender" value="masculine" />
+                                <span>Masculino</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="gender" value="feminine" />
+                                <span>Feminino</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="gender" value="other" />
+                                <span>Outro</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="receive-communications" />
+                            Aceito receber comunicações com novidades, promoções e outras informações nos meios de contato cadastrados
+                        </label>
+                    </div>
+                    <div class="terms-text">
+                        <p>Ao informar meus dados, concordo com a <a href="#">política de privacidade</a> e os <a href="#">termos de uso</a></p>
+                    </div>
+                    <button type="submit" class="btn-cta">PROSSEGUIR</button>
+                </form>
+            </div>
+            
+            <div id="unidade-section" class="hidden">
+                <a href="#" class="back-link" data-target="cadastro-form-section"><i class="fas fa-arrow-left"></i> Voltar</a>
+                <h1>Escolha sua Unidade</h1>
+                <h2>Selecione a unidade mais perto de você para ver os planos disponíveis.</h2>
+                <div class="units-grid">
+                    <button class="btn-unit" data-unidade="itapetinga">
+                        <div class="unit-icon"><i class="fas fa-dumbbell"></i></div>
+                        <h3>Libra Itapetinga</h3>
+                    </button>
+                    <button class="btn-unit" data-unidade="saogoncalo">
+                        <div class="unit-icon"><i class="fas fa-running"></i></div>
+                        <h3>Libra São Gonçalo</h3>
+                    </button>
+                    <button class="btn-unit" data-unidade="nossasenhora">
+                        <div class="unit-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Libra N. Sra. Apresentação</h3>
+                    </button>
+                </div>
+            </div>
+
+            <div id="planos-section" class="hidden">
+                <a href="#" class="back-link" data-target="unidade-section"><i class="fas fa-arrow-left"></i> Voltar</a>
+                <h1>Escolha seu Plano</h1>
+                <h2>Assine para ter acesso a conteúdos exclusivos.</h2>
+                <div class="pricing-table">
+                    </div>
+            </div>
+
+            <p class="login-link">
+                Já tem uma conta? <a href="login.html">Faça login aqui.</a>
+            </p>
         </div>
-        <h2>Crie sua conta.</h2>
-        <form id="registration-form">
-          <div class="form-group">
-            <label for="name">Nome Completo</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="password">Crie sua Senha</label>
-            <input type="password" id="password" name="password" required />
-          </div>
-
-          <hr class="form-divider" />
-
-          <h3>Escolha seu plano:</h3>
-          <div class="plan-options">
-            <label class="plan-card">
-              <input type="radio" name="plan" value="libra" required />
-              <div class="plan-details">
-                <h4>Plano Libra</h4>
-                <p>R$ 110/mês</p>
-                <ul>
-                  <li>Acesso à unidade</li>
-                  <li>Treinos no App</li>
-                  <li>Sem fidelidade</li>
-                </ul>
-              </div>
-            </label>
-            <label class="plan-card featured">
-              <input type="radio" name="plan" value="prime" required />
-              <div class="plan-details">
-                <span class="badge">Mais popular</span>
-                <h4>Plano Prime</h4>
-                <p>R$ 150/mês</p>
-                <ul>
-                  <li>Acesso a todas as unidades</li>
-                  <li>Aulas coletivas</li>
-                  <li>Descontos em parceiros</li>
-                </ul>
-              </div>
-            </label>
-          </div>
-
-          <button type="submit" class="btn-cta">Finalizar Cadastro</button>
-        </form>
-        <p class="login-link">
-          Já tem uma conta? <a href="login.html">Faça login aqui.</a>
-        </p>
-      </div>
     </main>
-
     <script src="js/script-cadastro.js"></script>
-     <script src="js/transicao.js"></script>
-  </body>
+    <script src="js/cadastro.js"></script>
+</body>
 </html>
